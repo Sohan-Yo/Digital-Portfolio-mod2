@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+    <!-- navBar -->
+    <img class="logoImg" src="/images/company_logo.png" alt="">
+ <header class="header">
+    <a href="../index.html" class="logo">Digital portfolio</a>
+
+    <nav class="navbar">
+      <a href="./history.html">History</a>
+      <a href="./geo.html">Geography</a>
+      <a href="./eco.html">Economics</a>
+      <a href="./dp.html">Demo-politics</a>
+      
+    </nav>
+    <img class="menu" src="../images/menu.png" alt="">
+
+    <div class="dropdown">
+        <a href="./history.html">History</a>
+        <a href="./geo.html">Geography</a>
+        <a href="./eco.html">Economics</a>
+        <a href="./dp.html">Demo-politics</a>
+    </div>
+  </header>
+
+  <div class="content">
+    <div class="subcontent">
+    <h2 class="otherTxt" >Digital timeline: <span><a target="_blank" href="https://www.tiki-toki.com/timeline/entry/2063199/Nationalism-in-India/">Open in tiki-toki</a></span></h2>
+  <iframe src="https://www.tiki-toki.com/timeline/entry/2063199/Nationalism-in-India/" width="95%" height="480" sandbox></iframe>
+</div>
+
+<div class="subcontent">
+    <h2 class="otherTxt">Map Work: <span> <a target="_blank" href="https://www.google.com/maps/d/edit?mid=1EMRoEGqN-ayfJY244Jw6DH84DGg2xFI&usp=sharing">Open in Google My Maps</a></span></h2>
+  <iframe src="https://www.google.com/maps/d/embed?mid=1EMRoEGqN-ayfJY244Jw6DH84DGg2xFI&ehbc=2E312F" width="95%" height="500"></iframe>
+</div>
+
+  </div>
+
+  <script>
+    const toggleBtn = document.querySelector(".menu");
+    const dropdown = document.querySelector(".dropdown");
+    
+    toggleBtn.addEventListener("click", function(){
+      dropdown.classList.toggle("open")
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+    const navbar = document.querySelector(".header");
+
+    window.addEventListener("scroll", function() {
+        if (window.scrollY > 50) {
+            navbar.classList.remove("transparent");
+            navbar.classList.add("opaque");
+        } else {
+            navbar.classList.remove("opaque");
+            navbar.classList.add("transparent");
+        }
+    });
+});
+
+  </script>
+</body>
+</html>
